@@ -1,0 +1,34 @@
+:root {
+  --background-color: #ffffff;
+  --placeholder-color:#ffffff;
+  --text-color: #000000;
+  --primary-color: #007acc;
+  --border-color: #ddd;
+  --editor-bg: #fff;
+  --empty-msg-color: #888;
+  // 默认的主题样式
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark-theme {
+  --background-color: #141414;
+  --placeholder-color:#141414;
+  --text-color: #ffffff;
+}
+
+.theme-button {
+  margin-left:0;
+  line-height: 40px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
+  app-region: no-drag;
+}

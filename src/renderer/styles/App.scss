@@ -1,0 +1,112 @@
+// 变量定义
+$primary-color: var(--primary-color);
+$background-color: var(--background-color);
+$border-color: var(--border-color);
+$text-color: var(--text-color);
+$placeholder-bg: var(--placeholder-color);
+$editor-bg: var(--editor-color);
+$empty-msg-color: var(--empty-msg-color);
+$editor-height: calc(100vh - 40px);
+
+// 通用样式
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+// 容器布局
+.app-main {
+  display:flex;
+  flex-direction: column; /* 垂直方向布局 */
+  height: 100vh; /* 或者根据需要的容器高度 */
+}
+
+.app-container {
+  display: flex;
+  flex-grow: 1; /* 占据剩余的空间 */
+  height: calc(100vh - 40px);
+}
+
+// 左侧文件管理器
+.file-explorer {
+  width: 250px;
+  // border-right: 1px solid $border-color;
+  padding: 10px;
+  background-color: $background-color;
+  overflow-y: auto;
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.left-panel {
+  background-color: $background-color;
+}
+
+.right-panel {
+  flex-grow: 1;
+  background-color: $background-color;
+  padding: 20px;
+}
+
+.divider {
+  cursor: ew-resize; /* 设置为左右拖动的光标 */
+  background-color: $border-color;
+  width: 1px; /* 分割线的宽度 */
+  height: 100%;
+}
+
+.file-explorer {
+  padding: 10px;
+}
+
+.editor {
+  padding: 10px;
+}
+
+
+
+// 右侧文件编辑器
+.file-editor {
+  flex: 1;
+  background-color: $editor-bg;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+
+  .editor-container {
+    width: 100%;
+    height: $editor-height;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .editor-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: $placeholder-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $empty-msg-color;
+    font-size: 16px;
+  }
+
+  .empty-editor {
+    text-align: center;
+    color: $empty-msg-color;
+    font-size: 18px;
+  }
+}
